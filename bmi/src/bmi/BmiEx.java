@@ -14,8 +14,7 @@ public class BmiEx {
 		System.out.printf("당신의 BMI는 %.1f 입니다.",bmi);
 		
 		
-		dddddddd
-
+		dddddddd테스트추가
 	}
 
 }
