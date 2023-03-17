@@ -19,6 +19,6 @@ public class BMI {
 		} else if (bmi <= 25) {
 			System.out.println("당신은 비만입니다.");
 		}
-dd
+
 	}
 }
