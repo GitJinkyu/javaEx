@@ -40,7 +40,7 @@ public class Ex04_07 {
 				case 4:
 					System.out.println("Money: "+balance);
 					System.out.println("프로그램 종료");
-					System.exit(0);
+					break label;
 					
 	
 				
