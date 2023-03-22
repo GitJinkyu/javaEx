@@ -1,4 +1,4 @@
-package obejectEx;
+package objectEx;
 
 public class CalculatorMain {
 
@@ -11,6 +11,12 @@ public class CalculatorMain {
 		//생성자는 반환 타입이 없다
 		//생성자의 역할=객체 초기화
 		Calculator calc = new Calculator();
+		
+		System.out.println(calc.name);
+		calc.name = "실수계산기";
+		System.out.println("calc name:"+calc.name);
+		
+		
 		
 		
 		int sum= calc.add(5,3);

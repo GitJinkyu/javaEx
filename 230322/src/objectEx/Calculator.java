@@ -1,7 +1,21 @@
-package obejectEx;
+package objectEx;
 
 public class Calculator {
 	
+	// 필드(전역변수)
+	//접근제한자를 붙이지 않으면 default
+	String name ;
+	
+	
+	//생성자는 클래스 이름과 동일하다
+	//생성자는 반환 타입이 없다
+	//생성자의 역할=객체 초기화
+	//생성자 : new 연산자를 만나서 객체가 생성될때 실행된다.
+	public Calculator() {
+		name = "정수계산기" ;
+		System.out.println(name);
+		System.out.println("Calculator() 생성자를 실행합니다.");
+	}
 	/**
 	 * 두개의 정수를 받아서 두수의 합을 반환한다 
 	 *        
