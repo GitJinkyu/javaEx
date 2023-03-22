@@ -22,12 +22,16 @@ public class BoardMain {
 		
 		//board객체를 생성하여 boardArr배열 0번째 index에 넣어준다.
 		  
-		boardArr[0] = new Board("게시글1","홍길동");
+		boardArr[0] = new Board("제목", "내용", "홍길동", "2023-03-22", 0);
 		boardArr[1] = new Board("게시글2","홍길동");
 		boardArr[2] = new Board("게시글3","홍길동");
 		boardArr[3] = new Board("게시글4","홍길동");
 		boardArr[4] = new Board("게시글5","홍길동");
 		//board board board board board
+		
+		
+		
+		
 		
 		for(Board board :boardArr) {
 			System.out.println("===============");
@@ -38,6 +42,7 @@ public class BoardMain {
 			System.out.println(board.hitcount);
 			System.out.println("===============");
 		}
+		
 	}
 
 }
