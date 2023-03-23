@@ -1,8 +1,7 @@
 package member.service;
 
 public class MemberService {
-	String id;
-	String password;
+	
 	
 	public boolean login(String id,String password) {
 		//id에 null이들어올 경우 nullpointException이 발생할 우려가 있다
