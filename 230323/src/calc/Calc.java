@@ -11,7 +11,7 @@ public class Calc {
 	
 	public void excute() {
 		System.out.println("excute 함수 시작");
-		double result = avg(7,10);
+		double result = avg(7,10); //메서드 호출
 		System.out.println("실행결과 : "+result);
 	
 	}
@@ -19,7 +19,7 @@ public class Calc {
 	private double avg(int i, int j) {
 		
 		System.out.println("avg 함수 시작");
-		int sum= plus(i,j);
+		int sum= plus(i,j);//메서드 호출
 		System.out.println("avg 실행");
 		return sum/2;
 	}
