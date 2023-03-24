@@ -11,12 +11,15 @@ public class Employee extends Person{
 	//매개변수 생성자
 	public Employee(String name,int age,double height,double weight,int salary,String dept) {
 		super(age,height,weight);
+		this.name=name;
 		this.salary=salary;
 		this.dept=dept;
+		
 	}
 	
 	//메소드
 	public String information() {
-		return salary+dept;
+		return name+" 나이:"+getAge()+" 키:"+getHeight()+" 몸무게:"+getWeight()+" 급여:"+salary+" 부서:"+dept;
+		
 	}
 }
