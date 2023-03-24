@@ -15,6 +15,7 @@ public class Application {
 		System.out.println(product3.information());
 		
 		System.out.println("==========================================");
+		
 		// 객체 가격,세금 변경
 		product1.setPrice(1200000);
 		product2.setPrice(1200000);
@@ -32,14 +33,11 @@ public class Application {
 		System.out.println("==========================================");
 		
 		//세금률 적용된 가격 출력
-		System.out.println("상품명 = "+product1.getName());
-		System.out.println("부가세 포함 가격 = "+product1.realprice());
 		
-		System.out.println("상품명 = "+product2.getName());
-		System.out.println("부가세 포함 가격 = "+product2.realprice());
 		
-		System.out.println("상품명 = "+product3.getName());
-		System.out.println("부가세 포함 가격 = "+product3.realprice());
+		product1.realprice();
+		product2.realprice();
+		product3.realprice();
 
 	}
 

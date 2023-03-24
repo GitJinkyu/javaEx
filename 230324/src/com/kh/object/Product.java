@@ -1,7 +1,6 @@
-package com.kh.object.practice;
+package com.kh.object;
 
 public class Product {
-	
 	//필드
 	private String id;
 	private String name;
@@ -9,23 +8,22 @@ public class Product {
 	private int price;
 	private double tax;
 	
-	//기본 생성자
+	//기본생성자
 	public Product() {
 		
 	}
 	
 	//매개변수 생성자
-	public Product(String id,String name,String site,int price, double tax) {
+	public Product(String id,String name,String site,int price,double tax) {
 		this.id=id;
 		this.name=name;
 		this.site=site;
 		this.price=price;
 		this.tax=tax;
-		
+	
 	}
 	
 	//메서드
-
 	public String getId() {
 		return id;
 	}
@@ -66,18 +64,16 @@ public class Product {
 		this.tax = tax;
 	}
 	
+	//정보 출력 메서드
 	public String information() {
 		return id+" "+name+" "+site+" "+price+" "+tax;
-		
 	}
 	
-	//세금적용 가격 메소드
+	//세율 계산 가격 메서드
 	public void realprice() {
-		System.out.println("상품명 = "+getName());
-		int res = (int)(price + price*tax);
-		System.out.println("부가세 포함 가격 = "+ res +"원");
+		int res = (int)(price+(price*tax));
+		System.out.println("상품명= "+name);
+		System.out.println("부가세 포함 가격= "+res);
 		
 	}
-	
-	
 }
