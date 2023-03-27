@@ -44,7 +44,7 @@ public class Application {
 			
 			i++;
 			//배열 꽉차면 반복문 탈출
-			if(i>3) {
+			if(i>=10) {
 				System.out.println("정보란이 꽉찼습니다. 입력을 중단합니다.");
 				break out;
 			}
@@ -68,9 +68,12 @@ public class Application {
 		
 		//사원 정보 모두 출력
 		for(Employee employeelist: employeeArr) {
-			System.out.println("==============등록된 사원 정보==============");
-			System.out.println(employeelist.information());
-			System.out.println("=======================================");
+			if(employeelist!=null) {
+				System.out.println("============등록된 사원 정보============");
+				System.out.println(employeelist.information());
+				System.out.println("=====================================");
+			}
+			
 		}
 		System.out.println("프로그램을 종료합니다.");
 		
