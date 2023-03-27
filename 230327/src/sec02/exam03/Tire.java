@@ -25,8 +25,10 @@ public class Tire {
 		rotation++; //타이어 1회전
 		if(rotation> maxRotation) {
 			//바퀴 교체해야한다고 알려줌
+			System.out.println(location+" 타이어 펑크!");
 			return false;
 		}
+		System.out.println(location+" Tire 수명: "+(maxRotation-rotation)+"회");
 		return true;
 	}
 }

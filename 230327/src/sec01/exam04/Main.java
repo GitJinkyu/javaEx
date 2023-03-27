@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		//부모타입으로 자식객체를 생성 합니다.
 		//자동형변환 됩니다.
-		Airplane airplane = new SupersonicAirplane(SupersonicAirplane.SUPERSONIC);
+		Airplane airplane = new SupersonicAirplane();
 		
 		//부모타입으로 변환시
 		//1.부모가 가지고 있는 필드 또는 메서드에만 접근이 가능하다

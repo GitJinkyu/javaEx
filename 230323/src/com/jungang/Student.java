@@ -11,7 +11,7 @@ public class Student extends Person{
 	//매개변수 생성자
 	public Student(String name,int age,double height,double weight,int grade,String major) {
 		super(age,height,weight);
-		this.name=name;
+		super.name=name;
 		this.grade=grade;
 		this.major=major;
 	}

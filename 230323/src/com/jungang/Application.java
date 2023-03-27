@@ -7,7 +7,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		//학생 정보 기록 배열 
+		//학생 정보 기록 배열 생성
 		Student[] studentArr = new Student[3];
 		studentArr[0] = new Student("김진규",31,181,70,4,"컴공");
 		studentArr[1] = new Student("유재석",41,172,57,4,"코미디");
@@ -21,11 +21,11 @@ public class Application {
 		}
 		
 		
-		//사원 정보 기록 배열
+		//사원 정보 기록 배열 생성
 		Employee[] employeeArr = new Employee[10];
 
 		int i = 0 ;
-		out:while(i<employeeArr.length) {
+		while(i<employeeArr.length) {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("이름을 입력해주세요");
 			String name = scan.next();
@@ -44,9 +44,9 @@ public class Application {
 			
 			i++;
 			//배열 꽉차면 반복문 탈출
-			if(i>=10) {
+			if(i>=3) {
 				System.out.println("정보란이 꽉찼습니다. 입력을 중단합니다.");
-				break out;
+				break ;
 			}
 			
 			//계속 입력받기
@@ -57,7 +57,7 @@ public class Application {
 			if("n".equals(input)||"N".equals(input)) {
 				//반복문 탈출
 				System.out.println("입력이 끝났습니다.");
-				break out;
+				break ;
 			}else if("Y".equals(input)||"y".equals(input)) {
 				continue;
 			}else {
