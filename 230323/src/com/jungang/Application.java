@@ -71,7 +71,7 @@ public class Application {
 			if(employeelist!=null) {
 				System.out.println("============등록된 사원 정보============");
 				System.out.println(employeelist.information());
-				System.out.println("=====================================");
+				System.out.println("===================================");
 			}
 			
 		}
