@@ -9,24 +9,24 @@ public class Application {
 		
 		//학생 정보 기록 배열 생성
 		Student[] studentArr = new Student[3];
-		studentArr[0] = new Student("김진규",31,181,70,4,"컴공");
-		studentArr[1] = new Student("유재석",41,172,57,4,"코미디");
-		studentArr[2] = new Student("강호동",45,177,81,4,"씨름");
+		studentArr[0] = new Student("홍길동",20,178.2,70.0,1,"정보시스템공학과");
+		studentArr[1] = new Student("김말똥",21,187.3,80.0,2,"경영학");
+		studentArr[2] = new Student("강개순",23,167.0,45.0,4,"정보통신공학과");
 		
 		//학생 정보 모두 출력
 		for(Student studentList : studentArr) {
 			
 			System.out.println(studentList.information());
-			System.out.println("===============");
+			System.out.println("======================================================");
 		}
 		
 		
 		//사원 정보 기록 배열 생성
 		Employee[] employeeArr = new Employee[10];
+		Scanner scan = new Scanner(System.in);
 
 		int i = 0 ;
 		while(i<employeeArr.length) {
-			Scanner scan = new Scanner(System.in);
 			System.out.println("이름을 입력해주세요");
 			String name = scan.next();
 			System.out.println("나이를 입력해주세요");
@@ -44,7 +44,7 @@ public class Application {
 			
 			i++;
 			//배열 꽉차면 반복문 탈출
-			if(i>=3) {
+			if(i>=10) {
 				System.out.println("정보란이 꽉찼습니다. 입력을 중단합니다.");
 				break ;
 			}
@@ -68,10 +68,14 @@ public class Application {
 		
 		//사원 정보 모두 출력
 		for(Employee employeelist: employeeArr) {
+			//null 체크
+			//배열이 초기화될때 null값으로 초기화
+			//employeelist. <--주소접근 연산자인 . 을 이용할 경우
+			//null은 주소를 가지고 있지 않으므로 오류가 발생
 			if(employeelist!=null) {
-				System.out.println("============등록된 사원 정보============");
+				System.out.println("===================등록된 사원 정보===================");
 				System.out.println(employeelist.information());
-				System.out.println("===================================");
+				System.out.println("=================================================");
 			}
 			
 		}

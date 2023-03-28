@@ -20,7 +20,8 @@ public class Person {
 	
 	//메소드
 	public String information() {
-		return name +","+ getAge();
+		return "이름:"+name+" 나이:"+getAge()+" 키:"+getHeight()+" 몸무게:"+getWeight();
+		
 
 	}
 

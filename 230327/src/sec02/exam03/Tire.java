@@ -23,12 +23,14 @@ public class Tire {
 	 */
 	public boolean roll() {
 		rotation++; //타이어 1회전
-		if(rotation> maxRotation) {
+		System.out.println(location+"누적 회전수 : " + rotation);
+		System.out.println(location+"최대 회전수 : " + maxRotation);
+		if(rotation>= maxRotation) {
 			//바퀴 교체해야한다고 알려줌
 			System.out.println(location+" 타이어 펑크!");
 			return false;
 		}
-		System.out.println(location+" Tire 수명: "+(maxRotation-rotation)+"회");
+//		System.out.println(location+" Tire 수명: "+(maxRotation-rotation)+"회");
 		return true;
 	}
 }

@@ -19,7 +19,7 @@ public class Employee extends Person{
 	
 	//메소드
 	public String information() {
-		return name+" 나이:"+getAge()+" 키:"+getHeight()+" 몸무게:"+getWeight()+" 급여:"+salary+" 부서:"+dept;
+		return super.information()+" 급여:"+salary+" 부서:"+dept;
 		
 	}
 }
