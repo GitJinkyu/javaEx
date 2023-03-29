@@ -7,16 +7,20 @@ public class Cat extends Animal{
 	//필드
 	private String location;
 	private String color;
+	
 	//생성자
 	public Cat() {
 		
 	}
-	
 	public Cat(String name,String kinds,String location,String color) {
+		//부모의 필드인 name,kinds를 갖다 쓰기위해
+		//부모 생성자를 호출
+		//super(필드,필드);
 		super(name, kinds);
-		this.location=location;
-		this.color=color;
+		setLocation(location);
+		setColor(color);
 	}
+	
 	//메소드
 	public String getLocation() {
 		return location;

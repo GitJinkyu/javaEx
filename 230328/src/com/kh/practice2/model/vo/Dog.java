@@ -4,6 +4,7 @@ package com.kh.practice2.model.vo;
 
 public class Dog extends Animal {
 	//필드
+	public static final String PLACE="애견카페";
 	private int weight;
 	
 	//생성자
@@ -11,9 +12,13 @@ public class Dog extends Animal {
 		
 	}
 	public Dog(String name,String kinds,int weight) {
+		//부모의 필드인 name,kinds를 갖다 쓰기위해
+		//부모 생성자를 호출
+		//super(필드,필드);
 		super(name, kinds);
-		this.weight=weight;
+		setWeight(weight);
 	}
+	
 	//메서드
 	public int getWeight() {
 		return weight;
