@@ -16,11 +16,11 @@ public class Application {
 			int dice =(int)(Math.random()*2+1);
 			
 			if(dice == 1) {
-				Animal d = new Dog("바둑이","포유류",30);
-				animalArr[i] = d;
+				Dog dog = new Dog("바둑이","포유류",30);
+				animalArr[i] = dog;
 			}else {
-				Animal c = new Cat("나비", "포유류", "서울", "갈색");
-				animalArr[i] = c;
+				Cat cat = new Cat("나비", "포유류", "서울", "갈색");
+				animalArr[i] = cat;
 			}
 		}
 
