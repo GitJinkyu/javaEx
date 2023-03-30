@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class scannerprac {
 	public static void main(String[] args) throws IOException {
-		int height=0;
-		int weight=0;
+		Double height=0.0;
+		Double weight=0.0;
 		
 		Scanner scan = new Scanner(System.in);
 		while (true) {
@@ -15,13 +15,13 @@ public class scannerprac {
 			try {
 				System.out.println("당신의 키를 입력해주세요(단위: cm): ");
 				// double height = scan.nextDouble();
-				height = scan.nextInt();
-				System.out.printf("당신의 키는 %d cm입니다. \n", height);
+				height = scan.nextDouble();
+				System.out.printf("당신의 키는 %.1f cm입니다. \n", height);
 				
 			} catch (InputMismatchException e) {
 				//잘못 입력받은 값 버퍼 처리
 				scan.next();
-				System.out.println("숫자를 입력해주세요.");
+				System.err.println("입력이 잘못됐습니다. 숫자를 입력해주세요.");
 				continue;
 			}
 
@@ -30,14 +30,14 @@ public class scannerprac {
 				try {
 					System.out.println("당신의 몸무게를 입력해주세요(단위: kg): ");
 					// int weight = scan.nextInt();
-					weight = scan.nextInt();
-					System.out.printf("당신의 몸무게는 %d kg입니다. \n", weight);
+					weight = scan.nextDouble();
+					System.out.printf("당신의 몸무게는 %.1f kg입니다. \n", weight);
 					break;
 					
-				} catch (Exception e) {
+				} catch (InputMismatchException e) {
 					//잘못 입력받은 값 버퍼 처리
 					scan.next();
-					System.out.println("숫자를 입력해주세요.");
+					System.err.println("입력이 잘못됐습니다. 숫자를 입력해주세요.");
 				}
 				
 			}
