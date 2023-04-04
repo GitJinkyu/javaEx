@@ -13,19 +13,19 @@ public class DatebaseDao implements Dao {
 	}
 
 	@Override
-	public int insertBook(Book book) {
+	public int insertBook(List<Book> book) {
 		System.out.println("DB-신규 도서 등록");
 		return 0;
 	}
 
 	@Override
-	public int deleteBook(Book book) {
+	public int deleteBook(List<Book> book) {
 		System.out.println("DB-도서 삭제");
 		return 0;
 	}
 
 	@Override
-	public int updateBook(Book book) {
+	public int updateBook(List<Book> book) {
 		System.out.println("DB-도서 정보 업데이트");
 		return 0;
 	}

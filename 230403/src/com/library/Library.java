@@ -29,14 +29,18 @@ public class Library {
 		}
 		//책의 리스트를 조회 (파일 또는 DB를 이애용해서 조회)
 		//책을 생성해서 리스트에 담기
+		bookList = dao.getBookList();
+		System.out.println("라이브러리 생성자");
+		System.out.println("도서 목록");
+		Info();
 		
 		//TODO : 일련번호가 겹치지않았으면 좋겠다
 		//데이터베이스를 이용할 경우 번호를 기본키로 사용시 
 		//중복된 번호는 입력이 안되므로 오류 발생
-		bookList.add(new Book(1,"책1","작가1",false));
-		bookList.add(new Book(2,"책2","작가2",false));
-		bookList.add(new Book(3,"책3","작가3",false));
-		bookList.add(new Book(4,"책4","작가4",false));
+//		bookList.add(new Book(1,"책1","작가1",false));
+//		bookList.add(new Book(2,"책2","작가2",false));
+//		bookList.add(new Book(3,"책3","작가3",false));
+//		bookList.add(new Book(4,"책4","작가4",false));
 	}
 	
 	/**
@@ -49,8 +53,9 @@ public class Library {
 	 */
 	public boolean insertBook(int no, String title, String author, boolean isRent) {
 		Book book = new Book(no,title,author,isRent);
+		
 		bookList.add(book);
-		dao.insertBook(book);
+		dao.insertBook(bookList);
 		return true;
 	}
 	
@@ -60,7 +65,7 @@ public class Library {
 		for(Book book : bookList) {
 			// 사용자가 입력한 index(일려번호)가 존재하는 경우
 			if(book.getNo() ==  index) {
-				dao.deleteBook(book);
+				dao.deleteBook(bookList);
 				System.out.println("삭제가 완료되었습니다.");
 				return bookList.remove(book);
 			}
@@ -138,27 +143,29 @@ public class Library {
 		System.out.println("==========================");
 	}
 	
-	public static void main(String[] args) {
-		Library lib = new Library("db");
-		
-		//도서 리스트 출력
-		lib.Info();
-		
-		//신규 도서 등록
-		lib.insertBook(5, "책5", "작가5", false);
-		lib.Info();
-		System.out.println("도서 삭제 실행 5");
-		lib.deleteBook(5);
-		
-		System.out.println("도서 대여 실행 5");
-		//도서 대여후 출력 
-		lib.rentBook(5);
-		lib.Info();
-		
-		System.out.println("도서 반납 실행 5");
-		//도서 반납후 출력
-		lib.returnBook(5);
-		lib.Info();
-		
-	}
+	
+	
+//	public static void main(String[] args) {
+//		Library lib = new Library("db");
+//		
+//		//도서 리스트 출력
+//		lib.Info();
+//		
+//		//신규 도서 등록
+//		lib.insertBook(5, "책5", "작가5", false);
+//		lib.Info();
+//		System.out.println("도서 삭제 실행 5");
+//		lib.deleteBook(5);
+//		
+//		System.out.println("도서 대여 실행 5");
+//		//도서 대여후 출력 
+//		lib.rentBook(5);
+//		lib.Info();
+//		
+//		System.out.println("도서 반납 실행 5");
+//		//도서 반납후 출력
+//		lib.returnBook(5);
+//		lib.Info();
+//		
+//	}
 }
