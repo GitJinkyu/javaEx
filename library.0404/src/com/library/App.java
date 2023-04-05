@@ -7,8 +7,7 @@ import com.library.vo.Book;
 
 public class App {
 	public static void main(String[] args) {
-		FileDao dao = new FileDao();
-		
+//		FileDao dao = new FileDao();
 		//dao.getList 메소드를 호출해 파일을 읽어들이고
 		//list에 저장
 //		List<Book> list = dao.getList();
