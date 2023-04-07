@@ -48,7 +48,7 @@ public class fileDao implements Dao{
 	 */
 	private Book makeBook(String readLine) {
 		Book book=null;
-		String[] strArry = readLine.split(",");
+		String[] strArry = readLine.split(" ");
 		
 		//강제형변환시 예외가 발생 할 수 있으므로
 		//파일이 올바르지 않은 형태로 저장되어있을경우 예외 발생
@@ -93,6 +93,27 @@ public class fileDao implements Dao{
 			System.err.println(e.getMessage());
 			return false;
 		}
+	}
+
+
+	@Override
+	public int delete(int no) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int update(int no) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int insert(Book book) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

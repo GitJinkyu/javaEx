@@ -1,6 +1,7 @@
 package com.library.vo;
 
 import java.util.Collections;
+import java.util.Date;
 
 //리스트 자동정렬해주는 인터페이스 
 public class Book implements Comparable<Book>{
@@ -8,6 +9,8 @@ public class Book implements Comparable<Book>{
 	private String title;
 	private String author;
 	private boolean isRent;
+	private Date regdate;
+	private Date editdate;
 	
 	
 	
@@ -20,16 +23,28 @@ public class Book implements Comparable<Book>{
 		this.isRent = isRent;
 	}
 
-	
-	
+
+
+	public Book(int no, String title, String author, Boolean isRent, Date regdate, Date editdate) {
+		super();
+		this.no = no;
+		this.title = title;
+		this.author = author;
+		this.isRent = isRent;
+		this.regdate = regdate;
+		this.editdate = editdate;
+	}
+
+
+
 	@Override
 	public String toString() { //실제 텍스트 파일에 입력될 형식, 구분자 설정대로 저장
 		
 		return 
 				getNo()
-				+","+getTitle()
-				+","+getAuthor()
-				+","+isRent;
+				+" "+getTitle()
+				+" "+getAuthor()
+				+" "+isRent;
 	}
 	
 	public String information() { // 콘솔 창에서 출력될 형식
