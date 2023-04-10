@@ -67,6 +67,7 @@ public class Library {
 		
 		//3.리스트를 파일로 출력
 		boolean res = dao.listToFile(list);
+		dao.insert(book);
 		
 		//4.추가한 책이 파일에 정상적으로 등록이 되지않을 경우를 대비해야함
 		// 리스트와 파일의 데이터를 맞추기 위해 추가하려던 책을 리스트에서 제거
@@ -97,6 +98,7 @@ public class Library {
 				System.out.println(toString());
 				//2. 삭제된 리스트를 파일로 출력하여 갱신해줌
 				boolean res = dao.listToFile(list);
+				dao.delete(no);
 				if(!res) {
 					//파일 출력이 실패할 경우 책을 다시 리스트에 추가해줌
 					list.add(book);
