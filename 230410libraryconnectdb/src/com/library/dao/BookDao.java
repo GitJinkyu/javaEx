@@ -94,6 +94,7 @@ public class BookDao {
 			
 			ResultSet rs = pstmt.executeQuery();
 			
+			//rs.next() = 데이터가 조회가 된다면 true 반환
 			return rs.next();
 			
 		} catch (SQLException e) {

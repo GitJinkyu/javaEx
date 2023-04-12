@@ -10,13 +10,13 @@ public class GuGuDan {
 		//label
 		
 			
-		Outter :for(count=1; count<=9; count++ ) {
+		Outter :for(count=2; count<=9; count++ ) {
 			System.out.println(count+"단");
 			
 			for(int i=1; i<=9; i++) {
 				
 				//6단을 출력한 후 반복문을 탈출
-				if(count==6) {
+				if(count==10) {
 					
 					//label이 달린 반복문을 탈출한다
 					break Outter;
