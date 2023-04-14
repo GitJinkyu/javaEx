@@ -42,9 +42,12 @@ public class BookDao {
 
 	public static int insertBook(BookVo bookVo) {
 		String sql="insert into book values(?, ?, ?, ?)";
+		//TODO "insert into book values(Seq.book.no.nextval, ?, ?, ?)"
+		//시퀀스로 bookVo.no 받아서 해보기
 		try(Connection conn = DBUtil.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql);) {
 			
+//			pstmt.get;
 			pstmt.setInt(1, bookVo.getBookNo());
 			pstmt.setString(2, bookVo.getTitle());
 			pstmt.setString(3, bookVo.getAuthor());
