@@ -2,6 +2,7 @@ package com.library.controller;
 
 import java.util.Scanner;
 
+import com.library.dao.BookDao;
 import com.library.service.BookService;
 import com.library.service.MemberService;
 import com.library.vo.BookVo;
@@ -9,6 +10,7 @@ import com.library.vo.BookVo;
 public class LibraryController {
 	BookService bookService=new BookService();
 	MemberService memberService=new MemberService();
+	BookDao bd = new BookDao();
 	
 	public void start() {
 		System.out.println("=============================");
@@ -43,14 +45,14 @@ public class LibraryController {
 			switch (menu) {
 			case 1:
 				// 도서 등록 기능 코드 작성
-				System.out.println("도서 일련번호를 입력해주세요");
-				bookNo = getInt();
+//				System.out.println("도서 일련번호를 입력해주세요");
+//				bookNo = bd.Seqbookno();
 				System.out.println("도서명을 입력해주세요");
 				String title =getString();
 				System.out.println("작가를 입력해주세요");
 				String author =getString();
 				
-				bookService.InsertBook(new BookVo(bookNo,title,author,"N"));
+				bookService.InsertBook(new BookVo(0,title,author,"N"));
 				
 				break;
 			case 2:

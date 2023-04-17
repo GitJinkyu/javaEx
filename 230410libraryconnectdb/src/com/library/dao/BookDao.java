@@ -39,19 +39,21 @@ public class BookDao {
 		
 		return list;
 	}
-
+	
 	public static int insertBook(BookVo bookVo) {
-		String sql="insert into book values(?, ?, ?, ?)";
-		//TODO "insert into book values(Seq.book.no.nextval, ?, ?, ?)"
-		//시퀀스로 bookVo.no 받아서 해보기
+
+		String sql="insert into book values(book_seq.NEXTVAL, ?, ?, 'N')";
+		//TODO "insert into book values(book_seq.NEXTVAL, ?, ?, ?)"
+		//시퀀스로 book_seq.NEXTVAL 받아서 해보기
 		try(Connection conn = DBUtil.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql);) {
+//			 ResultSet rs = pstmt.executeQuery();
+
 			
-//			pstmt.get;
-			pstmt.setInt(1, bookVo.getBookNo());
-			pstmt.setString(2, bookVo.getTitle());
-			pstmt.setString(3, bookVo.getAuthor());
-			pstmt.setString(4, bookVo.getRentYN());
+//			pstmt.setInt(1, bookVo.getBookNo());
+			pstmt.setString(1, bookVo.getTitle());
+			pstmt.setString(2, bookVo.getAuthor());
+//			pstmt.setString(3, bookVo.getRentYN());
 			
 			int res = pstmt.executeUpdate();
 			return res;

@@ -17,6 +17,9 @@ public class BookVo {
 		this.rentYN = rentYN;
 	}
 	
+	
+	
+	
 	@Override
 	public String toString() {
 		String str = getRentYN().equals("Y")? "대여중":"";
