@@ -56,6 +56,7 @@ public class BookDao {
 //			pstmt.setString(3, bookVo.getRentYN());
 			
 			int res = pstmt.executeUpdate();
+			
 			return res;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
