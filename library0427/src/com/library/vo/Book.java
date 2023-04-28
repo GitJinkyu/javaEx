@@ -21,19 +21,20 @@ public class Book {
 		this.author = author;
 	}
 	
+	
 	@Override
 	public String toString() {
-		String rentYNStr = "";
+		String rentYNStr = "대여가능 🙆‍♂️";
 
 		//도서가 rentYN=Y(대여중)인 경우 대여중으로 표시
 		if("Y".equals(getRentyn())) {
-			rentYNStr="대여중";
+			rentYNStr="대여중 🙅‍♂️";
 		}
 		
-		return getNo()
-				+" "+getTitle()
-				+" "+getAuthor()
-				+" "+rentYNStr;
+		return "도서번호:["+getNo()+"] "+
+				" 도서명:["+getTitle()+"] "+
+				" 작가:["+getAuthor()+"] "+
+				" 대여여부:["+rentYNStr+"]";
 	}
 	
 	public int getNo() {
@@ -64,3 +65,7 @@ public class Book {
 	
 	
 }
+
+
+
+

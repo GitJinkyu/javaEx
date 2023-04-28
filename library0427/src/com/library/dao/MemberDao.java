@@ -59,8 +59,8 @@ public class MemberDao {
 	
 	
 	
-	public int deleteMember(String id) {
-		String sql = "delete from member where id ='"+id+"'";
+	public int deleteMember(String id,String pw) {
+		String sql = "delete from member where id ='"+id+"'"+"and pw ='"+pw+"'";
 		try(Connection conn=ConnectionUtil.getConnection();
 				Statement stmt = conn.createStatement();) {
 			
@@ -82,7 +82,7 @@ public class MemberDao {
 	 * @return
 	 */
 	public boolean idCheck(String id) {
-		boolean res=false;
+		boolean res=true;
 		String sql = "select * from member where id ='"+id+"'";
 		try(Connection conn=ConnectionUtil.getConnection();
 				Statement stmt = conn.createStatement();
@@ -101,18 +101,16 @@ public class MemberDao {
 	}
 	
 	
-	public int insertMember(Member member) {
-		if (!idCheck(member.getId())) {
-	        return 0;
-	    }
+	public int insertMember(String id,String pw,String name,String adminYN) {
 		
-		String sql="INSERT INTO MEMBER (id,pw,name) VALUES(?,?,?)";
+		String sql="INSERT INTO MEMBER (id,pw,name,adminYN) VALUES(?,?,?,?)";
 		try(Connection conn = ConnectionUtil.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql);) {
 				
-				pstmt.setString(1, member.getId());
-				pstmt.setString(2, member.getPw());
-				pstmt.setString(3, member.getName());
+				pstmt.setString(1, id);
+				pstmt.setString(2, pw);
+				pstmt.setString(3, name);
+				pstmt.setString(4, adminYN);
 				
 				int res = pstmt.executeUpdate();
 				
