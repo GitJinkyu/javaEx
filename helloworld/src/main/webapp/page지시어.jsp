@@ -29,7 +29,7 @@
 	
 	<%
 	LocalDateTime ldt = LocalDateTime.now();
-	String date = ldt.format(DateTimeFormatter.ofPattern("yyy-mm-dd hh:mm:ss"));
+	String date = ldt.format(DateTimeFormatter.ofPattern("yyy-MM-dd hh:mm:ss"));
 	%>
 	
 	<%=
